@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>53ac9a10-3f20-4374-bf31-518fbf23a869</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+    <StaticUriPattern>^/static/.*</StaticUriPattern>
+    <StaticUriRewrite>^/$(MSBuildProjectName)/static/.*</StaticUriRewrite>
+    <PythonWsgiHandler>$(MSBuildProjectName).app</PythonWsgiHandler>
+    <Name>picam</Name>
+    <RootNamespace>picam</RootNamespace>
+    <InterpreterId>{785279dd-2a6f-459b-9452-878aabc6425d}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="picam\Toolbox\camera.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="picam\Toolbox\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="picam\DataModel\TimeModel.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="picam\DataModel\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="runserver.py" />
+    <Compile Include="picam\__init__.py" />
+    <Compile Include="picam\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="picam\" />
+    <Folder Include="picam\DataModel\" />
+    <Folder Include="picam\static\images\" />
+    <Folder Include="picam\static\myscript\" />
+    <Folder Include="picam\static\timelapse\" />
+    <Folder Include="picam\Toolbox\" />
+    <Folder Include="picam\static\" />
+    <Folder Include="picam\static\content\" />
+    <Folder Include="picam\static\fonts\" />
+    <Folder Include="picam\static\scripts\" />
+    <Folder Include="picam\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="picam\static\images\SadSmiley.jpeg" />
+    <Content Include="picam\static\myscript\sites.js" />
+    <Content Include="picam\templates\parameters.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="picam\static\content\bootstrap.css" />
+    <Content Include="picam\static\content\bootstrap.min.css" />
+    <Content Include="picam\static\content\site.css" />
+    <Content Include="picam\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="picam\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="picam\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="picam\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="picam\static\scripts\bootstrap.js" />
+    <Content Include="picam\static\scripts\bootstrap.min.js" />
+    <Content Include="picam\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="picam\static\scripts\jquery-1.10.2.js" />
+    <Content Include="picam\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="picam\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="picam\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="picam\static\scripts\jquery.validate.js" />
+    <Content Include="picam\static\scripts\jquery.validate.min.js" />
+    <Content Include="picam\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="picam\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="picam\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="picam\static\scripts\respond.js" />
+    <Content Include="picam\static\scripts\respond.min.js" />
+    <Content Include="picam\static\scripts\_references.js" />
+    <Content Include="picam\templates\about.html" />
+    <Content Include="picam\templates\contact.html" />
+    <Content Include="picam\templates\index.html" />
+    <Content Include="picam\templates\layout.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="picamEnv\">
+      <Id>{785279dd-2a6f-459b-9452-878aabc6425d}</Id>
+      <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
+      <Version>3.5</Version>
+      <Description>picamEnv (Python 3.5)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

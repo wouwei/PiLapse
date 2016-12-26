@@ -1,0 +1,41 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="jumbotron" id="Screenshot">
+        <table border="0" cellspacing="2" cellpadding="3">
+            <tr>
+                <td colspan="2">Heure actuelle</td>
+            </tr>
+            <tr>
+                <td>Heure :</td>
+                <td><input type="text" id="hours_now"  class="form-control" placeholder="00"></td>
+            </tr>
+            <tr>
+                <td>Minutes : </td>
+                <td><input type="text" id="min_now"  class="form-control" placeholder="00"></td>
+            </tr>
+            <tr>
+                <td colspan="2">Coucher de soleil</td>
+            </tr>
+            <tr>
+                <td>Heure :</td>
+                <td><input type="text" id="hours_sundown"  class="form-control" placeholder="00"></td>
+            </tr>
+            <tr>
+                <td>Minutes : </td>
+                <td><input type="text" id="min_sundown"  class="form-control" placeholder="00"></td>
+            </tr>
+            <tr>
+                <td colspan="2">Autre réglages</td>
+            </tr>
+            <tr>
+                <td>Timer :</td>
+                <td><input type="text" id="timer"  class="form-control"  placeholder="00"></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    {% endblock %}

@@ -1,5 +1,5 @@
 # PiLapse
-Time Lapse for Raspberry
+Time Lapse for Raspberry : this is the Flask part code .. 
 
 
 ## Goal : 
